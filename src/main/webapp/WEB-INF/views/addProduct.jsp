@@ -8,22 +8,35 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link href="<c:url value="/resources/styles/bootstrap.min.css" />" rel="stylesheet">
+        <script src="<c:url value="/resources/javascript/example.js" />"></script>
 		<title>Dodawanie</title>
 	</head>
 	
 	<body>
+
 		<section>
 			<div class="jumbotron">
 				<div class="containter">
-					<h1>Edytowanie menu</h1>
-					<p>Dodaj nową potrawę</p>
+					<h1>
+                        <spring:message code="addProduct.form.productEdit1.label"/>
+                    </h1>
+					<p>
+                        <spring:message code="addProduct.form.productEdit2.label"/>
+                    </p>
+                    <div class="pull-right" style="padding-right:50px">
+                        <a href="?language=pl" class="label label-pill label-danger">PL</a> <a href="?language=en" class="label label-pill label-primary">EN</a>
+                    </div>
 				</div>
 			</div>
 		</section>
+
 		<section class="container">
 			<form:form modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
 				<fieldset>
-					<legend>Uzupełnij niezbędne informacje</legend>
+					<legend>
+                        <spring:message code="addProduct.form.productEdit3.label"/>
+                    </legend>
 					
 					<div class="form-group">
 						<label class="control-label col-lg-2 col-lg-2" for="productId">
@@ -35,14 +48,18 @@
 					</div>
 					
 					<div class="form-group">
-						<label class="control-label col-lg-2 col-lg-2" for="productId">Nazwa potrawy</label>
+						<label class="control-label col-lg-2 col-lg-2" for="productId">
+                            <spring:message code="addProduct.form.productName.label"/>
+                        </label>
 						<div class="col-lg-10">
 							<form:input id="name" path="name" type="text" class="form:input-large"/>
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<label class="control-label col-lg-2 col-lg-2" for="productId">Cena</label>
+						<label class="control-label col-lg-2 col-lg-2" for="productId">
+                            <spring:message code="addProduct.form.productPrice.label"/>
+                        </label>
 						<div class="col-lg-10">
 							<form:input id="unitPrice" path="unitPrice" type="text" class="form:input-large"/>
 						</div>
@@ -56,21 +73,27 @@
 					</div>
 					--%>
 					<div class="form-group">
-						<label class="control-label col-lg-2 col-lg-2" for="productId">Kategoria</label>
+						<label class="control-label col-lg-2 col-lg-2" for="productId">
+                            <spring:message code="addProduct.form.productCategory.label"/>
+                        </label>
 						<div class="col-lg-10">
 							<form:input id="category" path="category" type="text" class="form:input-large"/>
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<label class="control-label col-lg-2 col-lg-2" for="productId">Liczba dostępnych</label>
+						<label class="control-label col-lg-2 col-lg-2" for="productId">
+                            <spring:message code="addProduct.form.productCount.label"/>
+                        </label>
 						<div class="col-lg-10">
 							<%--<form:input id="unitsInStock" path="unitsInStock" type="text" class="form:input-large"/>--%>
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<label class="control-label col-lg-2" for="description">Opis</label>
+						<label class="control-label col-lg-2" for="description">
+                            <spring:message code="addProduct.form.productDescription.label"/>
+                        </label>
 						<div class="col-lg-10">
 							<form:textarea id="description" path="description" rows="2"/>
 						</div>
@@ -84,7 +107,9 @@
 					</div>
 					--%>
 					<div class="form-group">
-						<label class="control-label col-lg-2" for="vege">Wegetariańskie?</label>
+						<label class="control-label col-lg-2" for="vege">
+                            <spring:message code="addProduct.form.productVege.label"/>
+                        </label>
 						<div class="col-lg-10">
 							<form:checkbox id="vege" path="vege"/>
 						</div>
@@ -109,21 +134,26 @@
 					</div>
 					<div class="form-group">
 						<div class="col-lg-offset-2 col-lg-10">
-							<input type="submit" id="btnAdd" class="btn btn-primary" value="Dodaj">
+                            <spring:message code="addProduct.form.productAdd.label" var="adding"/>
+							<input type="submit" id="btnAdd" class="btn btn-primary" value="${adding}">
 						</div>
 					</div>
-					
 				</fieldset>
 			</form:form>
-			<div class="jumbotron">
-				<a href="<c:url value="/j_spring_security_logout"/>" class="btn btn-danger btn-mini pull-right">
-					Wyloguj się
-				</a>
-			</div>
-			<div class="pull-right" style="padding-right:50px">
-				<a href="?language=pl">polski</a>|<a href="?language=en">angielski</a>
-			</div>
 		</section>
+
+        <section>
+            <div class="jumbotron">
+                <div class="containter">
+                    <a href="<c:url value="/j_spring_security_logout"/>" class="btn btn-danger btn-mini pull-right">
+                        <label>
+                            <spring:message code="addProduct.form.productLogout.label"/>
+                        </label>
+                    </a>
+                </div>
+            </div>
+        </section>
+
 	</body>
 	
 </html>

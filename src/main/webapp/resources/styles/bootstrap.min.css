@@ -1,0 +1,45 @@
+.divider {
+    height:50px;
+}
+
+section {
+    height:250px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+.bg-1 {
+    background: url('../images/background1.png') no-repeat center center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-2 {
+    background: url('../images/background2.png') no-repeat top center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-3 {
+    background: url('../images/background2.png') no-repeat bottom center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+#footer {
+    height: 60px;
+    background-color:black;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+    color:#efefef;
+}
+
+h1 {
+    color: white;
+    text-shadow: 1.5px 1.5px 2px black, 0 0 7px black, 0 0 7px black;
+}
