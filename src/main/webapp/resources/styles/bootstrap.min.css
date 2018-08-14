@@ -43,3 +43,39 @@ h1 {
     color: white;
     text-shadow: 1.5px 1.5px 2px black, 0 0 7px black, 0 0 7px black;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #003300;
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    background-color: #001a00;
+    text-decoration: none;
+    color: white;
+}

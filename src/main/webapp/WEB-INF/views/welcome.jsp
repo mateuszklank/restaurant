@@ -1,5 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <html>
 
@@ -8,7 +10,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link href="<c:url value="/resources/styles/bootstrap.min.css" />" rel="stylesheet">
     <script src="<c:url value="/resources/javascript/example.js" />"></script>
-    <title>Witaj</title>
+    <title>Restauracja Mateusza</title>
 </head>
 
 <body>
@@ -19,14 +21,17 @@
 </section>
 <!--/parallax 1-->
 
-<div class="container">
-    <div class="well">dupa
+<div class="container"></div>
+    <ul>
+        <li><a class="active" href="#home">STONA GŁÓWNA</a></li>
+        <li><a href="<c:url value="/login"/>">ZALOGUJ</a></li>
+        <li><a href="<c:url value="/j_spring_security_logout"/>">WYLOGUJ</a></li>
         <div class="pull-right" style="padding-right:10px">
-            <h2>
+            <h4>
                 <a href="?language=pl" class="label label-pill label-danger">PL</a> <a href="?language=en" class="label label-pill label-primary">EN</a>
-            </h2>
+            </h4>
         </div>
-    </div>
+    </ul>
 </div>
 
 <div class="container">
@@ -35,33 +40,34 @@
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading"><h3>Menu</h3></div>
+                <div class="panel-heading"><h3>O NAS</h3></div>
                 <div class="panel-body">
-                    Zamów z dostawą do domu a dostarczymy Twoje jedzenie najszybciej, jak to możliwe!
+                    Zabierz ze sobą apetyt, my zadbamy o resztę.
+                    Dokładamy wszelkich starań, abyście mogli cieszyć się czasem spędzonym u nas.
+                    Aby ważne dla Was chwile były miłym wspomnieniem, wszystko musi grać i być dostosowane do sytuacji. Liczy się najdrobniejszy szczegół. Wysoka jakość kuchni, profesjonalna obsługa a także niezwykła harmonijna atmosfera – perfekcja w każdym detalu. Dążenie do tego ideału to piękna sprawa i esencja naszej filozofii.
                 </div>
                 <div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a></div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading"><h3>Panel Kelnera</h3></div>
+                <div class="panel-heading"><h3>MENU</h3></div>
                 <div class="panel-body">
-                    Wymagane logowanie użytkownika!
+                    Od smakosza do tradycjonalisty - oferujemy całą paletę możliwości kulinarnych. Odkrywamy bogactwo nowych smaków, czerpiąc inspirację z tradycji Dziedzictwa Kulinarnego naszego regionu. Nie zapominamy również o Gościach, którzy są wegetarianami lub alergikami. Poinformuj kelnera o swoich preferencjach lub wymaganiach kulinarnych, a szef kuchni przygotuje danie z właściwych składników, dostosowanych do Twoich indywidualnych potrzeb.
                 </div>
                 <div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a></div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading"><h3>Panel Kucharza</h3></div>
+                <div class="panel-heading"><h3>KONTAKT</h3></div>
                 <div class="panel-body">
-                    Wymagane logowanie użytkownika!
+                    Jeśli masz jakieś pytania - skontaktuj się z nami! Odpowiemy na nie najszybciej jak to możliwe!
                 </div>
                 <div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a></div>
             </div>
         </div>
     </div><!--/row-->
-    <hr>
 
 </div><!--/container-->
 
@@ -79,7 +85,6 @@
 
 <div class="container">
 
-    <hr>
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
@@ -115,7 +120,7 @@
             </div>
         </div>
     </div>
-    <hr>
+
 </div><!--/container-->
 
 <div class="divider"></div>

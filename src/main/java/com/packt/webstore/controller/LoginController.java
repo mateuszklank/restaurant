@@ -19,7 +19,8 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    //@RequestMapping(value = "/logout", method = RequestMethod.GET)
+    @RequestMapping(value = "/j_spring_security_logout", method = RequestMethod.GET)
     public String logout(Model model) {
         return "login";
     }
