@@ -19,4 +19,10 @@ public class HomeController {
 	public String greeting() {
 		return "welcome";
 	}
+
+	@RequestMapping("/panel")
+	public String panel() {
+		return "panel";
+	}
+
 }
