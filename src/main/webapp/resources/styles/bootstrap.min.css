@@ -40,6 +40,7 @@ section {
 }
 
 h1 {
+    font-family: "Lucida Console";
     color: white;
     text-shadow: 1.5px 1.5px 2px black, 0 0 7px black, 0 0 7px black;
 }
@@ -78,4 +79,19 @@ li a:hover {
     background-color: #001a00;
     text-decoration: none;
     color: white;
+}
+
+.btn-success,
+.btn-success:active,
+.btn-success:visited,
+.btn-success:focus {
+    background-color: white;
+    border-color: lightgrey;
+    color: black;
+}
+
+.btn-success:hover {
+    background-color: #ccffcc;
+    border-color: lightgrey;
+    color: black;
 }
