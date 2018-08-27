@@ -65,7 +65,7 @@ public class InMemoryProductDaoImpl implements ProductDao {
 		granola.setCategory("Deser");
 //		granola.setUnitsInStock(100);
 		
-		Product rajskie = new Product("P1242", "Rajskie Bounty", new BigDecimal(10));
+		Product rajskie = new Product("P1243", "Rajskie Bounty", new BigDecimal(10));
 		rajskie.setDescription("Nasza wege czekolada z kaszą jaglaną, kokosem i rodzynkami");
 		rajskie.setCategory("Deser");
 //		rajskie.setUnitsInStock(100);

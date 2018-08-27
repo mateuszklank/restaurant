@@ -40,64 +40,38 @@
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
-    <!-- About Section -->
     <div class="w3-container w3-padding-32 w3-center">
         <div class="w3-padding-32">
-            <hr>
-            <p><spring:message code="panel.select"/></p>
-            <p><spring:message code="panel.select2"/></p>
-            <hr>
+            <h3>Administrator</h3>
         </div>
     </div>
-
-    <!-- Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center">
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/admin.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.admin.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/cook.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.cook.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/waiter.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.waiter.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="w3-container w3-padding-32">
+    <div class="w3-half">
+        <h4>Dodawanie</h4>
+        <ul class="w3-ul w3-hoverable">
+            <li class="w3-padding-16">
+                <img src="/resources/images/admin.png" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Dodaj nowy produkt do menu</span>
+            </li>
+            <li class="w3-padding-16">
+                <img src="/resources/images/cook.png" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Dodaj konto nowego pracownika</span>
+            </li>
+        </ul>
+    </div>
+    <div class="w3-half">
+        <h4>Zarządzanie</h4>
+        <ul class="w3-ul w3-hoverable">
+            <li class="w3-padding-16">
+                <img src="/resources/images/waiter.png" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Wykonaj zamówienie</span>
+            </li>
+            <li class="w3-padding-16">
+                <img src="/resources/images/admin.png" class="w3-left w3-margin-right" style="width:50px">
+                <span class="w3-large">Sprawdź aktualnie obsługiwane zamówienia</span>
+            </li>
+        </ul>
+    </div>
     </div>
 
     <hr>

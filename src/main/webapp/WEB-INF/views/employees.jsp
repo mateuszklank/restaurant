@@ -1,7 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
 
@@ -44,60 +43,52 @@
     <!-- About Section -->
     <div class="w3-container w3-padding-32 w3-center">
         <div class="w3-padding-32">
+            <h4><b><spring:message code="welcome.ouremployees.label"/></b></h4>
             <hr>
-            <p><spring:message code="panel.select"/></p>
-            <p><spring:message code="panel.select2"/></p>
+            <p><spring:message code="welcome.ouremployees.more.label"/></p>
+            <p><spring:message code="welcome.menu.more.label"/></p>
             <hr>
         </div>
     </div>
 
     <!-- Photo Grid-->
     <div class="w3-row-padding w3-padding-16 w3-center">
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/admin.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.admin.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
+            <div class="w3-quarter">
+                <div class="thumbnail">
+                    <img src="<c:url value="/resources/images/adminfull.png"></c:url>" alt="image" style="width:100%"/>
+                    <div class="caption">
+                        <h3>Mateusz Klank</h3>
+                        <p><spring:message code="panel.admin.label"/></p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/cook.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.cook.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
+            <div class="w3-quarter">
+                <div class="thumbnail">
+                    <img src="<c:url value="/resources/images/cookfull.png"></c:url>" alt="image" style="width:100%"/>
+                    <div class="caption">
+                        <h3>Jan Kowalski</h3>
+                        <p><spring:message code="panel.cook.label"/></p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/waiter.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.waiter.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
+            <div class="w3-quarter">
+                <div class="thumbnail">
+                    <img src="<c:url value="/resources/images/waiterfull.png"></c:url>" alt="image" style="width:100%"/>
+                    <div class="caption">
+                        <h3>Jan Nowak</h3>
+                        <p><spring:message code="panel.waiter.label"/></p>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="w3-quarter">
+                <div class="thumbnail">
+                    <img src="<c:url value="/resources/images/waiter2full.png"></c:url>" alt="image" style="width:100%"/>
+                    <div class="caption">
+                        <h3>Błażej Nowak</h3>
+                        <p><spring:message code="panel.waiter.label"/></p>
+                    </div>
+                </div>
+            </div>
     </div>
 
     <hr>

@@ -100,9 +100,6 @@ li a:hover {
     color: black;
 }
 */
-body {
-    font-family: "Lato", sans-serif;
-}
 
 .sidenav {
     height: 100%;
@@ -139,4 +136,15 @@ body {
 
 a {
     text-decoration-line: none;
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Karma", sans-serif;
+}
+.w3-bar-block {
+    padding:20px;
+}
+
+.w3-bar-item {
+    padding:20px;
 }

@@ -103,6 +103,11 @@ public class ProductController {
 		productService.addProduct(newProduct);
 		return "redirect:/products";
 	}
+
+	@RequestMapping("/invalidPromoCode")
+	public String invalidPromoCode() {
+		return "invalidPromoCode";
+	}
 	
 	@InitBinder
 	public void initialiseBinder(WebDataBinder binder) {

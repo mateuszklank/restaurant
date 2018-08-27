@@ -20,9 +20,14 @@ public class HomeController {
 		return "welcome";
 	}
 
-	@RequestMapping("/panel")
-	public String panel() {
-		return "panel";
+	@RequestMapping("/employees")
+	public String employeess() {
+		return "employees";
+	}
+
+	@RequestMapping("/contact")
+	public String contact() {
+		return "contact";
 	}
 
 }

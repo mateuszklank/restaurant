@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <html>
 
@@ -41,62 +41,32 @@
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
+
+
+
     <!-- About Section -->
     <div class="w3-container w3-padding-32 w3-center">
         <div class="w3-padding-32">
-            <hr>
-            <p><spring:message code="panel.select"/></p>
-            <p><spring:message code="panel.select2"/></p>
-            <hr>
+            <h4><b><spring:message code="welcome.menu.label"/></b></h4>
+            <h6><i><spring:message code="welcome.about.title.label"/></i></h6>
+            <p id="menu"><spring:message code="welcome.menu.more.label"/></p>
         </div>
     </div>
 
-    <!-- Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center">
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/admin.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.admin.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a href="<spring:url value="/products#menu"/>" class="w3-bar-item w3-black w3-button"><spring:message code="pagination.all.label"/></a>
+            <a href="<spring:url value="/products/sniadanie#menu"/>" class="w3-bar-item w3-button w3-hover-black"><spring:message code="pagination.breakfasts.label"/></a>
+            <a href="<spring:url value="/products/obiad#menu"/>" class="w3-bar-item w3-button w3-hover-black"><spring:message code="pagination.dinners.label"/></a>
+            <a href="<spring:url value="/products/deser#menu"/>" class="w3-bar-item w3-button w3-hover-black"><spring:message code="pagination.desserts.label"/></a>
         </div>
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/cook.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.cook.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-third">
-            <div class="thumbnail">
-                <div class="w3-display-container">
-                    <img src="<c:url value="/resources/images/waiter.png"></c:url>" alt="image" style="width:100%"/>
-                    <span class="w3-tag w3-display-topleft">
-                        <h3><spring:message code="panel.waiter.label"/></h3>
-                    </span>
-                    <div class="w3-display-middle w3-display-hover">
-                        <a href="<spring:url value="/"/>" class="w3-bar-item w3-black w3-button">
-                            <spring:message code="panel.open.label"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="w3-container w3-padding-32 w3-center">
+        <div class="w3-padding-32">
+            <h4><b><spring:message code="product.invalid"/></b></h4>
         </div>
     </div>
 
