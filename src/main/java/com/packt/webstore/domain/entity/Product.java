@@ -1,8 +1,10 @@
 package com.packt.webstore.domain.entity;
 
+import com.packt.webstore.validator.ProductId;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -12,11 +14,18 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 
 	private Long id_employee;
+	@Pattern(regexp="P[0=9]+", message="{Pattern.Product.productId.validation}")
+	@ProductId
 	private String productId;
+	@Size(min=4, max=50, message="{Size.Product.name.validation}")
 	private String name;
+	@Min(value=0, message="{Min.Product.unitPrice.validation}")
+	@Digits(integer=8, fraction=2, message="{Digits.Product.unitPrice.validation}")
+	@NotNull(message="{NotNull.Product.unitPrice.validation}")
 	private BigDecimal unitPrice;
 	private String description;
 	//private String manufacturer;
+	@Size(min=5, max=20, message="{Size.Product.category.validation}")
 	private String category;
 	//private long unitsInStock;
 	//private long unitsInOrder;

@@ -33,6 +33,7 @@
 
 		<section class="container">
 			<form:form modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
+				<form:errors path="*" cssClass="alert alert-danger" element="div"/>
 				<fieldset>
 					<legend>
                         <spring:message code="addProduct.form.productEdit3.label"/>
@@ -44,6 +45,7 @@
 						</label>
 						<div class="col-lg-10">
 							<form:input id="productId" path="productId" type="text" class="form:input-large"/>
+							<form:errors path="productId" cssClass="text-danger"/>
 						</div>
 					</div>
 					
@@ -53,6 +55,7 @@
                         </label>
 						<div class="col-lg-10">
 							<form:input id="name" path="name" type="text" class="form:input-large"/>
+							<form:errors path="name" cssClass="text-danger"/>
 						</div>
 					</div>
 					
@@ -62,6 +65,7 @@
                         </label>
 						<div class="col-lg-10">
 							<form:input id="unitPrice" path="unitPrice" type="text" class="form:input-large"/>
+							<form:errors path="unitPrice" cssClass="text-danger"/>
 						</div>
 					</div>
 					<%--
@@ -77,8 +81,9 @@
                             <spring:message code="addProduct.form.productCategory.label"/>
                         </label>
 						<div class="col-lg-10">
-							<form:input id="category" path="category" type="text" class="form:input-large"/>
-						</div>
+                            <form:input id="category" path="category" type="text" class="form:input-large"/>
+                            <form:errors path="category" cssClass="text-danger"/>
+                        </div>
 					</div>
 					
 					<div class="form-group">
