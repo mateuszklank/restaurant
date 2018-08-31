@@ -1,5 +1,6 @@
 package com.packt.webstore.domain.entity;
 
+import com.packt.webstore.validator.Category;
 import com.packt.webstore.validator.ProductId;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,7 +15,7 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 
 	private Long id_employee;
-	@Pattern(regexp="P[0=9]+", message="{Pattern.Product.productId.validation}")
+	/*@Pattern(regexp="P[0=9]+", message="{Pattern.Product.productId.validation}")*/
 	@ProductId
 	private String productId;
 	@Size(min=4, max=50, message="{Size.Product.name.validation}")
@@ -26,6 +27,7 @@ public class Product {
 	private String description;
 	//private String manufacturer;
 	@Size(min=5, max=20, message="{Size.Product.category.validation}")
+	@Category
 	private String category;
 	//private long unitsInStock;
 	//private long unitsInOrder;

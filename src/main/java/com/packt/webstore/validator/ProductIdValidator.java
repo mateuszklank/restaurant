@@ -2,6 +2,7 @@ package com.packt.webstore.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import javax.validation.constraints.Size;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,7 +16,7 @@ public class ProductIdValidator implements ConstraintValidator<ProductId, String
     private ProductService productService;
 
     public void initialize(ProductId constraintAnnotation) {
-        //  celowo pozostawione puste; w tym miejscu należy zainicjować adnotację ograniczającą do sensownych domyślnych w
+        //??????????
     }
 
     public boolean isValid(String value, ConstraintValidatorContext context) {
